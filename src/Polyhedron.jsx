@@ -16,11 +16,7 @@ export default function Polyhedron({ position, polyhedron }) {
     <mesh
       position={position}
       ref={ref}
-      onPointerDown={() => {
-        setCount((count + 1) % 3)
-      }}
       geometry={polyhedron[count]}>
-      <meshBasicMaterial color={'lime'} wireframe />
     </mesh>
   )
 }
