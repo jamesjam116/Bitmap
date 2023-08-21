@@ -5,3 +5,53 @@ body,
   margin: 0;
   background: #000000;
 }
+
+/* w-full px-10 py-3 bg-[#2e2929] flex justify-between */
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: #2e2929;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* flex justify-between items-center */
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.wb {
+  width: 160px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.twitter {
+  width: 30px;
+  height: 30px;
+}
+
+.wallet {
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 6px;
+}
