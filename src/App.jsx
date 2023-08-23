@@ -24,6 +24,19 @@ export default function App() {
     >
       <OrbitControls enableRotate={false} mouseButtons={{ LEFT: THREE.MOUSE.PAN }} />
       <scene>
+        {Array.from({ length: 100 }, (_, i) => (
+          Array.from({ length: 100 }, (_, j) => (
+            <Text
+              key={`text-${i}-${j}`}
+              position={[i - 49.5, 0, j - 49.5]}
+              fontSize={0.1}
+              rotation-x={-Math.PI / 2}
+              color="white"
+            >
+              {`${j * 100 + i}`}
+            </Text>
+          ))
+        ))}
         <gridHelper args={[100, 100]} material={new THREE.LineBasicMaterial({ color: 'white' })} />
       </scene>
     </Canvas >
@@ -32,16 +45,4 @@ export default function App() {
 
 
 
-{/* {Array.from({ length: 100 }, (_, i) => (
-  Array.from({ length: 100 }, (_, j) => (
-    <Text
-      key={`text-${i}-${j}`}
-      position={[i - 49.5, 0, j - 49.5]}
-      fontSize={0.1}
-      rotation-x={-Math.PI / 2}
-      color="white"
-    >
-      {`${j * 100 + i}`}
-    </Text>
-  ))
-))} */}
+
